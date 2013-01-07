@@ -10,15 +10,15 @@
 		<a href="#" wicket:id="clearSession">Clear session</a><br>
 		<h2>Managed injected objects (automatically injected)</h2>
 		<ul wicket:id="managed">
-			<li>@RequestScoped: <span wicket:id="requestScoped">[VALUE]</span></li>
-			<li>@SessionScoped: <span wicket:id="sessionScoped">[VALUE]</span></li>
-			<li>@ApplicationScoped: <span wicket:id="applicationScoped">[VALUE]</span></li>
+			<li>@RequestScoped (should change for every page refresh): <span wicket:id="requestScoped">[VALUE]</span></li>
+			<li>@SessionScoped (should change for every new session): <span wicket:id="sessionScoped">[VALUE]</span></li>
+			<li>@ApplicationScoped (should stay constant for each app deployment): <span wicket:id="applicationScoped">[VALUE]</span></li>
 		</ul>
 		<h2>Unmanaged injected objects (manually injected)</h2>
 		<ul wicket:id="unmanaged">
-			<li>@RequestScoped: <span wicket:id="requestScoped">[VALUE]</span></li>
-			<li>@SessionScoped: <span wicket:id="sessionScoped">[VALUE]</span></li>
-			<li>@ApplicationScoped: <span wicket:id="applicationScoped">[VALUE]</span></li>
+			<li>@RequestScoped (should change for every page refresh): <span wicket:id="requestScoped">[VALUE]</span></li>
+			<li>@SessionScoped (should change for every new session): <span wicket:id="sessionScoped">[VALUE]</span></li>
+			<li>@ApplicationScoped (should stay constant for each app deployment): <span wicket:id="applicationScoped">[VALUE]</span></li>
 		</ul>
 	</wicket:extend>
 </body>
