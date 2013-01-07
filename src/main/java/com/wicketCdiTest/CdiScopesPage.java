@@ -15,7 +15,6 @@ import org.apache.wicket.markup.html.basic.Label;
 import org.apache.wicket.markup.html.link.StatelessLink;
 import org.apache.wicket.model.PropertyModel;
 
-
 /**
  * Tests for a wicket-cdi.
  * 
@@ -68,6 +67,9 @@ public class CdiScopesPage extends TestBasePage {
 				modelObject, "applicationScoped.obj.value")));
 	}
 
+	/**
+	 * Inner random int holder object
+	 */
 	public static class RandomInt implements Serializable {
 		private int random = new Random().nextInt();;
 
@@ -106,6 +108,10 @@ public class CdiScopesPage extends TestBasePage {
 		}
 	}
 
+	/**
+	 * This object is not managed by wicket-cdi (field of this type for the Page
+	 * is not annotated with @Inject. It is injected via its constructor.
+	 */
 	public static class UnmanagedObject implements Serializable {
 
 		@Inject
@@ -116,6 +122,7 @@ public class CdiScopesPage extends TestBasePage {
 		private ApplicationScope applicationScoped;
 
 		public UnmanagedObject() {
+			// How to inject objects which are not Components, Pages, etc.
 			CdiContainer.get().getNonContextualManager().inject(this);
 		}
 
