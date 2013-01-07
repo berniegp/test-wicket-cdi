@@ -23,7 +23,7 @@
         <dependent-module archiveName="wicket-cdi-6.4.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/wicket-cdi/wicket-cdi">
             <dependency-type>uses</dependency-type>
         </dependent-module>
-        <property name="context-root" value="test-wicket-cdi"/>
         <property name="java-output-path" value="/test-wicket-cdi/target/classes"/>
+        <property name="context-root" value="test-wicket-cdi"/>
     </wb-module>
 </project-modules>
