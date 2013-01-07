@@ -8,9 +8,9 @@
 	<!-- 
 		For CDI. When running inside a servlet container Weld is initialized
 		via a servlet context listener -->
-<!-- 	<listener>
+	<listener>
 		<listener-class>org.jboss.weld.environment.servlet.Listener</listener-class>
-	</listener> -->
+	</listener>
 
 	<!--
 		There are three means to configure Wickets configuration mode and they 

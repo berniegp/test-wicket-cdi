@@ -40,7 +40,7 @@
 		
 		<!-- CDI Stuff -->
 		<!-- Dependencies when running in a servlet container (non java ee container) -->
-<!-- 		<dependency>
+		<dependency>
 			<groupId>org.jboss.weld</groupId>
 			<artifactId>weld-core</artifactId>
 			<version>1.1.10.Final</version>
@@ -59,7 +59,7 @@
 			<groupId>javax.servlet.jsp</groupId>
 			<artifactId>javax.servlet.jsp-api</artifactId>
 			<version>2.2.1</version>
-		</dependency> -->
+		</dependency>
 		<!-- Dependencies always needed for wicket-cdi -->
 		<dependency>
 			<groupId>org.apache.wicket</groupId>
@@ -68,11 +68,11 @@
 		</dependency>
 		<!-- needed for conversation scope propagation
 		CAUSES EXCEPTION WHEN ADDED! -->
-<!-- 		<dependency>
+		<dependency>
 			<groupId>org.jboss.seam.conversation</groupId>
-			<artifactId>seam-conversation-owb</artifactId>
+			<artifactId>seam-conversation-weld</artifactId>
 			<version>3.0.0.Final</version>
-		</dependency> -->
+		</dependency>
 		
 		<!-- LOGGING DEPENDENCIES - LOG4J -->
 		<dependency>
@@ -98,7 +98,7 @@
 		</dependency>
 	</dependencies>
 	
-	<dependencyManagement>
+<!-- 	<dependencyManagement>
 	<dependencies>
 		<dependency>
 			<groupId>javax.enterprise</groupId>
@@ -107,7 +107,7 @@
 			<scope>provided</scope>
 		</dependency>
 	</dependencies>
-	</dependencyManagement>
+	</dependencyManagement> -->
 	
 	<build>
 		<resources>

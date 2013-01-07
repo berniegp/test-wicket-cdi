@@ -1,11 +1,11 @@
 package com.wicketCdiTest;
 
 import javax.enterprise.inject.spi.BeanManager;
-import javax.naming.InitialContext;
 
 import org.apache.wicket.cdi.CdiConfiguration;
 import org.apache.wicket.protocol.http.WebApplication;
 import org.apache.wicket.util.time.Duration;
+import org.jboss.weld.environment.servlet.Listener;
 
 /**
  * Application object for your web application. If you want to run this
@@ -33,17 +33,17 @@ public class WicketApplication extends WebApplication {
 
 	private void setupCdi() {
 		BeanManager manager = null;
-		// BeanManager manager = (BeanManager) getServletContext().getAttribute(
-		// Listener.BEAN_MANAGER_ATTRIBUTE_NAME);
+		manager = (BeanManager) getServletContext().getAttribute(
+				Listener.BEAN_MANAGER_ATTRIBUTE_NAME);
 
 		// in application servers you can retrieve the bean manager from JNDI:
-		try {
-			Object lookup = new InitialContext()
-					.lookup("java:comp/BeanManager");
-			manager = (BeanManager) lookup;
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+		// try {
+		// Object lookup = new InitialContext()
+		// .lookup("java:comp/BeanManager");
+		// manager = (BeanManager) lookup;
+		// } catch (Exception e) {
+		// e.printStackTrace();
+		// }
 
 		new CdiConfiguration(manager).configure(this);
 	}

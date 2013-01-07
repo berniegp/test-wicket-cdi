@@ -23,7 +23,7 @@ public class Start {
 		// Set some timeout options to make debugging easier.
 		connector.setMaxIdleTime(timeout);
 		connector.setSoLingerTime(-1);
-		connector.setPort(8081);
+		connector.setPort(8080);
 		server.addConnector(connector);
 
 		Resource keystore = Resource.newClassPathResource("/keystore");
@@ -57,7 +57,7 @@ public class Start {
 
 		WebAppContext bb = new WebAppContext();
 		bb.setServer(server);
-		bb.setContextPath("/wicketTest");
+		bb.setContextPath("/test-wicket-cdi");
 		bb.setWar("src/main/webapp");
 
 		// START JMX SERVER
