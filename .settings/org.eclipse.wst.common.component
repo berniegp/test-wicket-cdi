@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="test-wicket-cdi">
+        <wb-resource deploy-path="/" source-path="/target/m2e-wtp/web-resources"/>
+        <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
+        <dependent-module archiveName="wicket-core-6.4.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/wicket-core/wicket-core">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="wicket-util-6.4.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/wicket-util/wicket-util">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="wicket-request-6.4.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/wicket-request/wicket-request">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="wicket-devutils-6.4.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/wicket-devutils/wicket-devutils">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="wicket-extensions-6.4.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/wicket-extensions/wicket-extensions">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="wicket-cdi-6.4.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/wicket-cdi/wicket-cdi">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <property name="context-root" value="test-wicket-cdi"/>
+        <property name="java-output-path" value="/test-wicket-cdi/target/classes"/>
+    </wb-module>
+</project-modules>

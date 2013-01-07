@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+<head>
+<meta charset="utf-8" />
+<title>Apache Wicket Quickstart</title>
+</head>
+<body>
+	<wicket:extend>
+		<h1>CDI scopes test page</h1>
+		<a href="#" wicket:id="clearSession">Clear session</a><br>
+		<h2>Managed injected objects (automatically injected)</h2>
+		<ul wicket:id="managed">
+			<li>@RequestScoped: <span wicket:id="requestScoped">[VALUE]</span></li>
+			<li>@SessionScoped: <span wicket:id="sessionScoped">[VALUE]</span></li>
+			<li>@ApplicationScoped: <span wicket:id="applicationScoped">[VALUE]</span></li>
+		</ul>
+		<h2>Unmanaged injected objects (manually injected)</h2>
+		<ul wicket:id="unmanaged">
+			<li>@RequestScoped: <span wicket:id="requestScoped">[VALUE]</span></li>
+			<li>@SessionScoped: <span wicket:id="sessionScoped">[VALUE]</span></li>
+			<li>@ApplicationScoped: <span wicket:id="applicationScoped">[VALUE]</span></li>
+		</ul>
+	</wicket:extend>
+</body>
+</html>
