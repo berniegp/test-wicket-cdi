@@ -11,7 +11,7 @@ import org.apache.wicket.util.time.Duration;
  * Application object for your web application. If you want to run this
  * application without deploying, run the Start class.
  * 
- * @see com.wicketTest.Start#main(String[])
+ * @see com.wicketCdiTest.Start#main(String[])
  */
 public class WicketApplication extends WebApplication {
 
@@ -33,9 +33,6 @@ public class WicketApplication extends WebApplication {
 
 	private void setupCdi() {
 		BeanManager manager = null;
-		// BeanManager manager = (BeanManager) getServletContext().getAttribute(
-		// Listener.BEAN_MANAGER_ATTRIBUTE_NAME);
-
 		// in application servers you can retrieve the bean manager from JNDI:
 		try {
 			Object lookup = new InitialContext()

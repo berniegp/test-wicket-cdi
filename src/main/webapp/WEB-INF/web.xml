@@ -5,13 +5,6 @@
 
 	<display-name>wicketCdiTest</display-name>
 	
-	<!-- 
-		For CDI. When running inside a servlet container Weld is initialized
-		via a servlet context listener -->
-<!-- 	<listener>
-		<listener-class>org.jboss.weld.environment.servlet.Listener</listener-class>
-	</listener> -->
-
 	<!--
 		There are three means to configure Wickets configuration mode and they 
 		are tested in the order given.

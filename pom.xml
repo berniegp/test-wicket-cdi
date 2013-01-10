@@ -39,27 +39,6 @@
 		</dependency>
 		
 		<!-- CDI Stuff -->
-		<!-- Dependencies when running in a servlet container (non java ee container) -->
-<!-- 		<dependency>
-			<groupId>org.jboss.weld</groupId>
-			<artifactId>weld-core</artifactId>
-			<version>1.1.10.Final</version>
-		</dependency>
-		<dependency>
-			<groupId>org.jboss.weld.servlet</groupId>
-			<artifactId>weld-servlet-core</artifactId>
-			<version>1.1.10.Final</version>
-		</dependency>
-		<dependency>
-			<groupId>javax.el</groupId>
-			<artifactId>javax.el-api</artifactId>
-			<version>2.2.4</version>
-		</dependency>
-		<dependency>
-			<groupId>javax.servlet.jsp</groupId>
-			<artifactId>javax.servlet.jsp-api</artifactId>
-			<version>2.2.1</version>
-		</dependency> -->
 		<!-- Dependencies always needed for wicket-cdi -->
 		<dependency>
 			<groupId>org.apache.wicket</groupId>
@@ -100,6 +79,7 @@
 	
 	<dependencyManagement>
 	<dependencies>
+		<!-- This scope must be changed to provided since TomEE provides it -->
 		<dependency>
 			<groupId>javax.enterprise</groupId>
 			<artifactId>cdi-api</artifactId>
