@@ -1,4 +1,4 @@
-package com.wicketTest;
+package com.wicketCdiTest;
 
 import java.lang.management.ManagementFactory;
 

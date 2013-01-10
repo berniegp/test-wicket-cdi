@@ -11,7 +11,7 @@ import org.jboss.weld.environment.servlet.Listener;
  * Application object for your web application. If you want to run this
  * application without deploying, run the Start class.
  * 
- * @see com.wicketTest.Start#main(String[])
+ * @see com.wicketCdiTest.Start#main(String[])
  */
 public class WicketApplication extends WebApplication {
 
@@ -35,15 +35,6 @@ public class WicketApplication extends WebApplication {
 		BeanManager manager = null;
 		manager = (BeanManager) getServletContext().getAttribute(
 				Listener.BEAN_MANAGER_ATTRIBUTE_NAME);
-
-		// in application servers you can retrieve the bean manager from JNDI:
-		// try {
-		// Object lookup = new InitialContext()
-		// .lookup("java:comp/BeanManager");
-		// manager = (BeanManager) lookup;
-		// } catch (Exception e) {
-		// e.printStackTrace();
-		// }
 
 		new CdiConfiguration(manager).configure(this);
 	}
